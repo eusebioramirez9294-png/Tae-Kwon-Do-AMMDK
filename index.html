@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AMMDK San Martín Texmelucan | Taekwondo Humanista</title>
+  <meta name="description" content="Taekwondo con enfoque humanista en San Martín Texmelucan. Clase muestra gratis. Dr. en Psicología, 4º Dan. Formación integral para niños, jóvenes y adultos." />
+  <meta property="og:title" content="AMMDK San Martín | Taekwondo Humanista" />
+  <meta property="og:description" content="Disciplina, confianza y valores. Clase muestra gratis. Promos activas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1620403729653-4a0ed2b9fe39?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <style>
+    :root{
+      --bg:#0b1220;        /* fondo oscuro elegante */
+      --card:#111a2e;      /* tarjetas */
+      --brand:#0ea5e9;     /* azul acento */
+      --brand-2:#22d3ee;   /* cian acento */
+      --text:#e5e7eb;      /* texto claro */
+      --muted:#9ca3af;     /* texto tenue */
+      --ok:#22c55e;        /* verde */
+      --warn:#f59e0b;      /* ámbar */
+      --danger:#ef4444;    /* rojo */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1220 0%, #0b1220 40%, #0e1a34 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;border-radius:12px}
+
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.8);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .brand .logo{width:36px;height:36px;border-radius:50%;background: radial-gradient(60% 60% at 50% 35%, var(--brand), var(--brand-2));box-shadow: var(--shadow)}
+    .menu{display:flex;gap:16px;align-items:center}
+    .menu a{padding:8px 10px;border-radius:10px}
+    .menu a:hover{background:rgba(255,255,255,.06)}
+    .cta{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;font-weight:800;padding:10px 16px;border-radius:14px;box-shadow: var(--shadow)}
+
+    .hero{padding:56px 0 32px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+    .chip{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(34,211,238,.15);color:#aef; font-weight:700}
+    h1{font-size:40px;line-height:1.1;margin:12px 0 8px}
+    .lead{font-size:18px;color:var(--muted);max-width:60ch}
+    .hero-cta{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+    .btn{border:1px solid rgba(255,255,255,.14);padding:12px 16px;border-radius:14px;font-weight:700}
+    .btn.primary{border:none;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;box-shadow:var(--shadow)}
+    .badges{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;color:#bfe}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+
+    section{padding:40px 0}
+    h2{font-size:28px;margin:0 0 14px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
+    th{color:#bfe;font-weight:800}
+
+    .banner{background:linear-gradient(90deg, rgba(34,211,238,.15), rgba(14,165,233,.15));border:1px solid rgba(255,255,255,.08);padding:10px 14px;border-radius:12px;margin:14px 0;color:#cfe}
+    .promo .deal{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .price{font-size:28px;font-weight:900;color:#aef}
+    .tag{font-size:12px;background:rgba(255,255,255,.08);padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.14)}
+
+    footer{padding:28px 0;color:#aab}
+
+    .burger{display:none}
+    @media (max-width: 880px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .menu{display:none}
+      .burger{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.14)}
+      nav.open .menu{display:flex;flex-direction:column;gap:8px;position:absolute;top:58px;left:16px;right:16px;background:rgba(7,12,24,.95);padding:12px;border:1px solid rgba(255,255,255,.08);border-radius:14px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav" id="nav">
+    <div class="brand"><div class="logo" aria-hidden="true"></div> <span>AMMDK San Martín</span></div>
+    <nav id="menu">
+      <button class="burger" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰ Menú</button>
+      <div class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#por-que">¿Por qué nosotros?</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#promos">Promociones</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a class="cta" href="#contacto">Agendar clase</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="chip">Taekwondo Humanista • Escuela avalada</span>
+      <h1>Formamos cuerpo, mente y carácter</h1>
+      <p class="lead">Clases para niños (3+), adolescentes y adultos. Enfoque psicológico humanista con el <strong>Dr. Eusebio María Ramírez</strong>, Cinta Negra 4º Dan. Clase muestra <strong>gratis</strong>.</p>
+      <div class="hero-cta">
+        <a class="btn primary" id="cta-wsp" href="#contacto">📲 Agendar clase muestra</a>
+        <a class="btn" href="#promos">🎁 Ver promociones</a>
+      </div>
+      <div class="badges">
+        <span class="tag">Aval nacional / internacional</span>
+        <span class="tag">Psicología deportiva</span>
+        <span class="tag">Ambiente seguro</span>
+      </div>
+      <div class="banner">🚨 <strong>Promoción de mediados de mes:</strong> $650 lo que resta del mes + <strong>Uniforme GRATIS</strong>.</div>
+    </div>
+    <div>
+      <div class="card">
+        <img alt="Alumnos de taekwondo entrenando patadas" loading="lazy" src="https://images.unsplash.com/photo-1620403729653-4a0ed2b9fe39?q=80&w=1200&auto=format&fit=crop" />
+        <p style="margin-top:10px;color:var(--muted)">Entrenamiento técnico y emocional en cada clase.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section id="por-que">
+  <div class="container">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Dirección profesional</h3>
+        <p>Clases guiadas por <strong>Dr. en Psicología</strong> y <strong>4º Dan</strong>. Formación integral: cuerpo, mente y valores.</p>
+      </div>
+      <div class="card">
+        <h3>Enfoque humanista</h3>
+        <p>Metodología basada en empatía, autoestima y disciplina. Palabras de aliento que construyen seguridad.</p>
+      </div>
+      <div class="card">
+        <h3>Escuela avalada</h3>
+        <p>Aval Moo Duk Kwan. Entrenamiento progresivo y seguro, con objetivos, evaluación y eventos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios">
+  <div class="container">
+    <h2>Beneficios por etapa</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Niños 3–6 años</h3>
+        <p>Psicomotricidad, lenguaje emocional, hábitos y respeto. Confianza desde el juego guiado.</p>
+      </div>
+      <div class="card">
+        <h3>7–14 años</h3>
+        <p>Disciplina, concentración, autocontrol y defensa personal responsable. Trabajo en equipo.</p>
+      </div>
+      <div class="card">
+        <h3>15+ años y adultos</h3>
+        <p>Acondicionamiento, gestión del estrés, metas personales y filosofía marcial para la vida diaria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="horarios">
+  <div class="container">
+    <h2>Horarios</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Grupo</th>
+            <th>Edad</th>
+            <th>Horario</th>
+            <th>Días</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Peques</td>
+            <td>2–3 años</td>
+            <td>4:00–5:00 pm</td>
+            <td>Lunes a Viernes</td>
+          </tr>
+          <tr>
+            <td>Kids I</td>
+            <td>4–6 años</td>
+            <td>5:15–6:15 pm</td>
+            <td>Lunes a Viernes</td>
+          </tr>
+          <tr>
+            <td>Kids II</td>
+            <td>7–14 años</td>
+            <td>6:15–7:15 pm</td>
+            <td>Lunes a Viernes</td>
+          </tr>
+          <tr>
+            <td>Juvenil/Adultos</td>
+            <td>15+ años</td>
+            <td>7:15–8:15 pm</td>
+            <td>Lunes a Viernes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="promos" class="promo">
+  <div class="container">
+    <h2>Promociones vigentes</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="deal">
+          <div>
+            <h3>Promoción de mediados de mes</h3>
+            <ul>
+              <li>💸 <strong>$650</strong> lo que resta del mes</li>
+              <li>🎁 <strong>Uniforme GRATIS</strong></li>
+              <li>🆓 Clase muestra sin costo</li>
+            </ul>
+          </div>
+          <div class="price">$650</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Agosto – Promoción familiar</h3>
+        <ul>
+          <li>🆓 Inscripción <strong>GRATIS</strong></li>
+          <li>💳 Mensualidad <strong>$650</strong></li>
+          <li>👕 Uniforme <strong>2x1</strong></li>
+        </ul>
+        <p style="color:var(--muted)">Aplican términos. Cupo limitado.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3>Curso especial</h3>
+      <ul>
+        <li>💥 Precio: <strong>$850</strong></li>
+        <li>📅 Incluye 1 mes de entrenamiento</li>
+        <li>🧾 Primera mensualidad hasta <strong>septiembre</strong></li>
+        <li>🎓 Diploma al finalizar</li>
+        <li>👕 <strong>Uniforme GRATIS</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="testimonios">
+  <div class="container">
+    <h2>Testimonios</h2>
+    <div class="grid-3">
+      <div class="card"><p>“Mi hijo ganó seguridad y ahora se defiende con respeto. El ambiente es muy humano.” — Madre de alumno 6 años</p></div>
+      <div class="card"><p>“Excelente guía del maestro. Se nota la formación en psicología y el enfoque en valores.” — Padre de alumna 9 años</p></div>
+      <div class="card"><p>“Mejoré mi condición física y aprendí a manejar el estrés.” — Alumno adulto</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2>Preguntas frecuentes</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>¿Es seguro para niños pequeños?</h3>
+        <p>Sí. Trabajamos con técnica progresiva, juegos guiados y reglas claras. Cuidamos el cuerpo y las emociones.</p>
+      </div>
+      <div class="card">
+        <h3>¿Ayuda contra el bullying?</h3>
+        <p>Enseñamos autocontrol, comunicación asertiva y defensa responsable. La confianza es la mejor prevención.</p>
+      </div>
+      <div class="card">
+        <h3>¿Qué necesito para iniciar?</h3>
+        <p>Ropa deportiva y muchas ganas. El uniforme se gestiona en la escuela (hay promoción vigente).</p>
+      </div>
+      <div class="card">
+        <h3>¿Puedo probar una clase?</h3>
+        <p>¡Sí! La clase muestra es gratuita. Agenda por WhatsApp y te esperamos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion">
+  <div class="container">
+    <h2>Ubicación</h2>
+    <div class="grid-2">
+      <div class="card">
+        <p><strong>AMMDK San Martín Texmelucan</strong><br/>Manuel P. Montes esquina con Av. Tlanalapa, 2º piso<br/>San Martín Texmelucan, Pue.</p>
+        <p style="color:var(--muted)">Entrada señalizada. Estacionamiento cercano.</p>
+        <a class="btn" href="#contacto">Quiero agendar mi clase</a>
+      </div>
+      <div class="card">
+        <iframe title="Mapa" style="border:0;width:100%;height:300px;border-radius:12px" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Manuel%20P.%20Montes%20%20esquina%20Av.%20Tlanalapa%2C%20San%20Mart%C3%ADn%20Texmelucan&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container">
+    <h2>Contacto y Registro</h2>
+    <div class="grid-2">
+      <div class="card">
+        <p>¿Listo para tu <strong>clase muestra gratis</strong>? Escríbenos por WhatsApp o llámanos. También puedes pasar directo durante los horarios de clase.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+          <a class="btn primary" id="wsp-link" href="#">📲 WhatsApp</a>
+          <a class="btn" href="tel:+52XXXXXXXXXX">📞 Llamar</a>
+        </div>
+        <p style="color:var(--muted);margin-top:8px">Atención: Lun–Vie 4:00–8:30 pm</p>
+      </div>
+      <div class="card">
+        <h3>Mensaje del Maestro</h3>
+        <p>Soy el <strong>Dr. Eusebio María Ramírez</strong> (4º Dan). Mi objetivo es formar personas íntegras: técnica, mente y valores. Aquí, cada palabra y cada ejercicio están pensados para construir <em>confianza</em> y <em>carácter</em>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <span>© <span id="year"></span> AMMDK San Martín Texmelucan</span>
+    <span style="color:var(--muted)">Hecho con respeto y disciplina 🥋</span>
+  </div>
+</footer>
+
+<script>
+  // 👇 CONFIGURA AQUÍ TU NÚMERO (solo dígitos, con lada de México: 52)
+  const WHATSAPP = '522212428119'; // ej. 522212428119
+
+  const wsp = document.getElementById('wsp-link');
+  const cta = document.getElementById('cta-wsp');
+  const msg = encodeURIComponent('Hola, quiero agendar mi clase muestra gratis.');
+  const url = `https://wa.me/${WHATSAPP}?text=${msg}`;
+  if (wsp) wsp.href = url;
+  if (cta) cta.href = url;
+  document.querySelectorAll('a[href^="tel:"]').forEach(a=> a.href = a.href.replace('XXXXXXXXXX', WHATSAPP.slice(2)));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Datos estructurados para SEO local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "AMMDK San Martín Texmelucan",
+  "description": "Escuela de Taekwondo con enfoque humanista. Clase muestra gratis. Promociones activas.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Manuel P. Montes esquina con Av. Tlanalapa, 2º piso",
+    "addressLocality": "San Martín Texmelucan",
+    "addressRegion": "Puebla",
+    "addressCountry": "MX"
+  },
+  "telephone": "+52XXXXXXXXXX"
+}
+</script>
+
+<!-- FAQ Schema para aparecer en resultados enriquecidos -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Es seguro para niños pequeños?",
+      "acceptedAnswer": {"@type": "Answer","text": "Sí. Trabajamos con técnica progresiva, juegos guiados y reglas claras. Cuidamos el cuerpo y las emociones."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ayuda contra el bullying?",
+      "acceptedAnswer": {"@type": "Answer","text": "Enseñamos autocontrol, comunicación asertiva y defensa responsable. La confianza es la mejor prevención."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo probar una clase?",
+      "acceptedAnswer": {"@type": "Answer","text": "Sí, la clase muestra es gratuita. Agenda por WhatsApp y te esperamos."}
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
